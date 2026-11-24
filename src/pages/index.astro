@@ -8,6 +8,7 @@ import Icon from '../components/Icon.astro';
 import Gallery from '../components/Gallery.astro';
 import { Image } from 'astro:assets';
 import { fotoDoServico } from '../data/fotos';
+import heroFoto from '../assets/hero.jpg';
 import { site } from '../data/site';
 import { servicos } from '../data/servicos';
 import { bairrosPorZona, bairroPath, zonasPrioritarias } from '../data/bairros';
@@ -56,10 +57,10 @@ const posts = (await getCollection('blog'))
 >
   <section class="hero hero-home">
     {
-      fotoEquipe && (
+      (
         <Image
           class="hero-bg"
-          src={fotoEquipe.src}
+          src={heroFoto}
           alt=""
           widths={[480, 800, 1200, 1600]}
           sizes="100vw"
