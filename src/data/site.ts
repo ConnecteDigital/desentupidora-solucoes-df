@@ -26,5 +26,5 @@ export function whatsappUrl(message: string = DEFAULT_WHATSAPP_MESSAGE) {
   return `https://api.whatsapp.com/send?phone=${site.phoneDigits}&text=${encodeURIComponent(message)}`;
 }
 
-// Contêiner do Google Tag Manager (vazio = sem rastreamento até o cliente mandar o ID)
-export const gtmId = '';
+// Contêiner do Google Tag Manager (único rastreamento do site; conversões ficam nele)
+export const gtmId = 'GTM-MC7ZFVQJ';
