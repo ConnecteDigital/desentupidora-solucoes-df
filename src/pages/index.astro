@@ -41,7 +41,7 @@ const faq = [
   },
 ];
 
-const fotoEquipe = fotoDoServico('desentupimento-de-esgoto');
+const fotoEquipe = fotoDoServico('desentupimento-de-cano');
 const temGaleria = servicos.some((s) => fotoDoServico(s.slug));
 
 const posts = (await getCollection('blog'))
@@ -171,9 +171,9 @@ const posts = (await getCollection('blog'))
       <section class="section">
         <div class="container">
           <div class="section-head">
-            <span class="eyebrow">Trabalhos realizados</span>
-            <h2>Serviços que já fizemos</h2>
-            <p>Fotos reais de atendimentos da {site.name} no DF.</p>
+            <span class="eyebrow">Nossos serviços</span>
+            <h2>Desentupimento sem quebra-quebra</h2>
+            <p>Máquinas de mola rotativa e equipamentos profissionais para cada tipo de entupimento.</p>
           </div>
           <Gallery limit={8} />
         </div>
