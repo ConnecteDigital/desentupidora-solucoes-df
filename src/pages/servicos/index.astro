@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CtaButtons from '../../components/CtaButtons.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import { site } from '../../data/site';
+import { servicos } from '../../data/servicos';
+import { breadcrumbSchema } from '../../data/schema';
+
+const crumbs = [
+  { name: 'Início', path: '/' },
+  { name: 'Serviços', path: '/servicos/' },
+];
+---
+
+<Base
+  title="Serviços de Desentupimento 24h em Brasília | Soluções DF"
+  description="Desentupimento de vaso sanitário, pia, ralo, esgoto e cano em Brasília e no DF. Atendimento 24h, sem quebra-quebra e com garantia."
+  schema={[breadcrumbSchema(crumbs)]}
+>
+  <section class="hero page-hero">
+    <div class="container">
+      <Breadcrumbs items={crumbs} />
+      <span class="eyebrow">Serviços</span>
+      <h1>Serviços de desentupimento em Brasília</h1>
+      <p class="hero-lead">Vaso, pia, ralo, esgoto e cano desentupidos 24 horas, com chegada em até {site.arrivalMinutes} minutos e garantia.</p>
+      <CtaButtons />
+    </div>
+  </section>
+  <section class="section section-soft">
+    <div class="container">
+      <div class="services-grid">
+        {servicos.map((s) => <ServiceCard servico={s} />)}
+      </div>
+    </div>
+  </section>
+  <CtaBand />
+</Base>
